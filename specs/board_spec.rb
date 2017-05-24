@@ -13,8 +13,18 @@ class TestBoard < MiniTest::Test
     @player_1 = Player.new("Eddie")
     @player_2 = Player.new("John")
 
+    @board = Board.new()
+
   end
 
+  def test_start()
+    assert_equal(1, @board.start())
+  end
 
+  def test_end()
+    assert_equal(100, @board.end())
+  end
+
+  
 
 end
