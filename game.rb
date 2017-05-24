@@ -13,4 +13,12 @@ class Game
     @players.push(new_player)
   end
 
+  def current_turn()
+    @players.first
+  end
+
+  def next_turn()
+    @players.last
+  end
+
 end

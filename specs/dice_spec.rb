@@ -10,8 +10,8 @@ class TestDice < MiniTest::Test
     @dice = Dice.new()
   end
 
-  def test_roll_dice()
-    assert_includes(1..6, @dice.roll_dice())
+  def test_roll()
+    assert_includes(1..6, @dice.roll())
   end
 
 end

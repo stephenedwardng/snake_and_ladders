@@ -13,12 +13,20 @@ class TestDice < MiniTest::Test
 
     @player_1 = Player.new("Eddie")
     @player_2 = Player.new("John")
+    @game.add_players(@player_1.get_name())
+    @game.add_players(@player_2.get_name())
   end
 
   def test_add_player()
-    @game.add_players(@player_1.get_name())
-    @game.add_players(@player_2.get_name())
     assert_equal(["Eddie", "John"], @game.get_players())
+  end
+
+  def test_current_turn()
+      assert_equal("Eddie", @game.current_turn())
+  end
+
+  def test_next_turn()
+      assert_equal("John", @game.next_turn())
   end
 
 end

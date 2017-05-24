@@ -4,7 +4,7 @@ class Dice
     @num = 1
   end
 
-  def roll_dice
+  def roll
     return @num = rand(6) + 1
   end
 
